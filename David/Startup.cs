@@ -24,8 +24,8 @@ namespace David
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseStaticFiles(); // static HTML, CSS, Js etc,
-            app.UseFileServer();
+            app.UseStaticFiles(); // static HTML, CSS, Js etc,
+            //app.UseFileServer();
 
             app.UseRouting();
 
