@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": ".NET",
+    "description": "ASP.NET Core",
+    "img": "/Portfolios/images/ASPNET.png"
+  },
+  {
+    "id": 2,
+    "title": "C#",
+    "description": "C# Fundamental",
+    "img": "/Portfolios/images/C#.png"
+  },
+  {
+    "id": 3,
+    "title": "Azure",
+    "description": "Microsoft Azure",
+    "img": "/Portfolios/images/Azure.png"
+  }
+]

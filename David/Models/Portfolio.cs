@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace David.Models
 {
@@ -8,6 +9,7 @@ namespace David.Models
 
         public string Title { get; set; }
         public string Description { get; set; }
+        [JsonPropertyName("img")]
         public string Image { get; set; }
 
         public override string ToString()
