@@ -1,4 +1,5 @@
 @page
+@inject PortfolioServiceJsonFile PortfolioService
 
 @using David.Models
 @using David.Services
@@ -16,7 +17,7 @@
 	//	new Portfolio {Id = 3, Title = "JavaScript", Description ="Node"},
 	//	};
 
-	var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
+	var portfolios = PortfolioService.GetPortfolios();
 
 	ViewBag.Title = "Index";
 }
