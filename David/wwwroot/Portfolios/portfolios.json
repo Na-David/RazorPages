@@ -2,19 +2,25 @@
   {
     "id": 1,
     "title": ".NET",
-    "description": "ASP.NET Core",
-    "img": "/Portfolios/images/ASPNET.png"
+    "description": ".NET 5.0",
+    "img": "/Portfolios/images/NET.webp"
   },
   {
     "id": 2,
     "title": "C#",
     "description": "C# Fundamental",
-    "img": "/Portfolios/images/C#.png"
+    "img": "/Portfolios/images/C.png"
   },
   {
     "id": 3,
     "title": "Azure",
     "description": "Microsoft Azure",
     "img": "/Portfolios/images/Azure.png"
+  },
+  {
+    "id": 4,
+    "title": "ASP.NET",
+    "description": "ASP.NET Core",
+    "img": "/Portfolios/images/ASPNET.png"
   }
 ]

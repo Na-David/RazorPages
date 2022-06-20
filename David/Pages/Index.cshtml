@@ -1,6 +1,7 @@
 @page
 
 @using David.Models
+@using David.Services
 
 @*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
@@ -8,12 +9,14 @@
 	//Layout = "_Layout";
 	//string[] portfolios = { "One", "Two", "Three" };
 
-	List<Portfolio> portfolios = new List<Portfolio>()
-	{
-		new Portfolio {Id = 1, Title = ".NET", Description ="ASP.NET Core"},
-		new Portfolio {Id = 2, Title = "C#", Description ="C# Fundamental"},
-		new Portfolio {Id = 3, Title = "JavaScript", Description ="Node"},
-		};
+	//List<Portfolio> portfolios = new List<Portfolio>()
+	//{
+	//	new Portfolio {Id = 1, Title = ".NET", Description ="ASP.NET Core"},
+	//	new Portfolio {Id = 2, Title = "C#", Description ="C# Fundamental"},
+	//	new Portfolio {Id = 3, Title = "JavaScript", Description ="Node"},
+	//	};
+
+	var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
 
 	ViewBag.Title = "Index";
 }
@@ -125,7 +128,7 @@
 					{
 						<div class="col-lg-4 mb-5">
 							<div class="card h-100 shadow border-0">
-								<img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+								<img class="card-img-top img-fluid" src="@portfolio.Image" alt="..." />
 								<div class="card-body p-4">
 									<div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
 									<a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">@portfolio.Title</h5></a>
