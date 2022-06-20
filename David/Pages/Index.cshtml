@@ -128,12 +128,14 @@
 					{
 						<div class="col-lg-4 mb-5">
 							<div class="card h-100 shadow border-0">
-								<img class="card-img-top img-fluid" src="@portfolio.Image" alt="..." />
+								@*<img class="card-img-top img-fluid" src="@portfolio.Image" alt="..." />*@
+								<div class="portfolio-item-image" style="background-image: url('@portfolio.Image');"></div>
 								<div class="card-body p-4">
 									<div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
 									<a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">@portfolio.Title</h5></a>
 									<p class="card-text mb-0">@portfolio.Description</p>
 								</div>
+
 								<div class="card-footer p-4 pt-0 bg-transparent border-top-0">
 									<div class="d-flex align-items-end justify-content-between">
 										<div class="d-flex align-items-center">
@@ -144,6 +146,7 @@
 											</div>
 										</div>
 									</div>
+									<button class="btn btn-primary">Read More...</button>
 								</div>
 							</div>
 						</div>
