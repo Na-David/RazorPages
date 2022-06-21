@@ -16,11 +16,5 @@
     "title": "Azure",
     "description": "Microsoft Azure",
     "img": "/Portfolios/images/Azure.png"
-  },
-  {
-    "id": 4,
-    "title": "ASP.NET",
-    "description": "ASP.NET Core",
-    "img": "/Portfolios/images/ASPNET.png"
   }
 ]
