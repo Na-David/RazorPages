@@ -1,40 +1,63 @@
 ﻿@page
 @model David.Pages.Portfolios.IndexModel
+
+@inject PortfolioServiceJsonFile PortfolioService
+
+@using David.Models
+@using David.Services
+
+@*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
+
 @{
 	ViewData["Title"] = "Portfolio";
+	var portfolios = PortfolioService.GetPortfolios();
 }
-            <!-- Page Content-->
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Our Work</h1>
-                        <p class="lead fw-normal text-muted mb-0">Company portfolio</p>
-                    </div>
-                    <div class="row gx-5">
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-5 mb-lg-0">
-                                <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative">
-                                <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Project name</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+<div class="conainer">
+	<h1 class="mt-4 mb-3">
+		Portfolio
+	</h1>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a asp-page="~/Index">Home</a>
+		</li>
+		<li class="breadcrumb-item active">Portfolio</li>
+	</ol>
+
+	<!-- Page Content-->
+	<h2>Portfolio</h2>
+	<div class="row">
+		@foreach (var portfolio in portfolios)
+		{
+			<div class="col-lg-4 mb-5">
+				<div class="card h-100 shadow border-0">
+					@*<img class="card-img-top img-fluid" src="@portfolio.Image" alt="..." />*@
+					<div class="portfolio-item-image" style="background-image: url('@portfolio.Image');"></div>
+					<div class="card-body p-4">
+						<div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+						<a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">@portfolio.Title</h5></a>
+						<p class="card-text mb-0">@portfolio.Description</p>
+					</div>
+
+					<div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+						<div class="d-flex align-items-end justify-content-between">
+							<div class="d-flex align-items-center">
+								<img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+								<div class="small">
+									<div class="fw-bold">Kelly Rowan</div>
+									<div class="text-muted">March 12, 2022 &middot; 6 min read</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary">Read More...</button>
+					</div>
+				</div>
+			</div>
+
+		}
+	</div>
+
+
+</div>
+
