@@ -1,8 +1,15 @@
 ﻿@page
-@model David.Pages.Portfolios.IndexModel
+@model David.Pages.Portfolios.ListModel
+
+@inject PortfolioServiceJsonFile PortfolioService
+
+
+
+@*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
 @{
 	ViewData["Title"] = "Portfolio";
+	var portfolios = PortfolioService.GetPortfolios();
 }
 
 <div class="conainer">
@@ -20,7 +27,7 @@
 	<!-- Page Content-->
 	<h2>Portfolio</h2>
 	<div class="row">
-		@foreach (var portfolio in Model.Portfolios)
+		@foreach (var portfolio in portfolios)
 		{
 			<div class="col-lg-4 mb-5">
 				<div class="card h-100 shadow border-0">
