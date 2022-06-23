@@ -16,6 +16,7 @@ namespace David
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddServerSideBlazor(); // When I Create a Blazor Components -> in Components Folder
             services.AddTransient<PortfolioServiceJsonFile>();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +35,7 @@ namespace David
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapBlazorHub(); // This one is also for the Blazor Components
                 //endpoints.MapGet("/", async context =>
                 //{
                 //    await context.Response.WriteAsync("Hello World!");
