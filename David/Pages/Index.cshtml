@@ -3,6 +3,7 @@
 
 @using David.Models
 @using David.Services
+@using David.Components
 
 @*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
@@ -18,6 +19,7 @@
 	//	};
 
 	var portfolios = PortfolioService.GetPortfolios();
+		Layout = "_LayoutPortfolio";
 
 	ViewBag.Title = "Index";
 }
@@ -124,6 +126,9 @@
 				</div>
 
 				<h2>Portfolio Heading</h2>
+
+				<component type="typeof(PortfolioList)" render-mode="ServerPrerendered"></component>
+
 				<div class="row gx-5">
 					@foreach (var portfolio in portfolios)
 					{
