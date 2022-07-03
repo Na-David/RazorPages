@@ -17,7 +17,7 @@ namespace David
         {
             services.AddRazorPages();
             services.AddServerSideBlazor(); // When I Create a Blazor Components -> in Components Folder
-            services.AddTransient<PortfolioServiceJsonFile>();
+            services.AddTransient<PortfolioServiceJsonFile>(); // I can use injection
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
