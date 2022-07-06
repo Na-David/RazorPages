@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "David.WebApp", "David.WebAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "David", "David\David.csproj", "{D8948206-5BF1-4D3F-B773-A9A1AA42E601}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroBase", "ZeroBase\ZeroBase.csproj", "{3BC3A5D8-4572-45AD-AD9F-DB936A967BE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D8948206-5BF1-4D3F-B773-A9A1AA42E601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8948206-5BF1-4D3F-B773-A9A1AA42E601}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8948206-5BF1-4D3F-B773-A9A1AA42E601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC3A5D8-4572-45AD-AD9F-DB936A967BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC3A5D8-4572-45AD-AD9F-DB936A967BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC3A5D8-4572-45AD-AD9F-DB936A967BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC3A5D8-4572-45AD-AD9F-DB936A967BE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
