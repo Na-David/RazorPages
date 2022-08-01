@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 
 namespace David.Models
-{
+{//Portfolio group has below contents
     public class Portfolio
     {
         public int Id { get; set; }
